@@ -148,7 +148,12 @@ app_license = "unlicense"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
+    "cron": {
+        "0 1 * * *": [
+            "frappe_app_coreco.frappe_app_coreco.scheduled_events.stock.doctype.warehouse.process_financial_balance.main"
+        ]
+    }
 # 	"all": [
 # 		"frappe_app_coreco.tasks.all"
 # 	],
@@ -164,7 +169,7 @@ app_license = "unlicense"
 # 	"monthly": [
 # 		"frappe_app_coreco.tasks.monthly"
 # 	],
-# }
+}
 
 # Testing
 # -------
